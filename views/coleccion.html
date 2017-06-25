@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Proyecto</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="autor" content="Renato Illescas, Lenin Tenecela">
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- FONTS AWESONE  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- GOOGLE FONTS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab">
+	<!-- BOOTSTRAP SOCIAL NETWORKS -->
+	<link rel="stylesheet" href="../css/bootstrap-social.css">
+	<!-- ESTILO DE LA PAGINA -->
+	<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+	<!-- Cabecera y menus navegacion-->
+	<header class="container">
+		<section class="container row">
+			<figure class="col-xs-12 col-sm-2 col-md-2">
+				<a href="index.html">
+					<img class="logo img-responsive" src="../image/logo2.jpg" alt="logoweb"/>
+				</a>
+			</figure>
+			<nav class="navbar menuSesion col-xs-12 col-sm-10 col-md-10 ">
+				<div class="container-fluid nav navbar-nav navbar-right">
+					<a href="sesion.html">Registro</a>
+					<a href="sesion.html">Iniciar Sesion</a>
+					<a href="#">Mi Carrito</a>
+				</div>
+			</nav>
+		</section>
+		<nav class="navbar navbar-inverse menuClientes row">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        		<span class="icon-bar"></span>
+	    	    <span class="icon-bar"></span>
+  		      <span class="icon-bar"></span>
+      		</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav menuNavegacion">
+						<li><a href="index.html">Incio</a></li>
+						<li><a href="#">Coleccion</a></li>
+				  	<li><a href="#">Promociones</a></li>
+						<li><a href="#">Saldo</a></li>
+						<li><a href="#">Locales</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- seccion variante-->
+	<section id="variante" class="container">
+
+		<div class="container row">
+			<nav class="menuColeccion hidden-xs hidden-sm col-md-2 col-lg-2">
+				<ul class="nav nav-list">
+					<li><label class="tree-toggle nav-header marcas">MARCA 1</label>
+						<ul class="nav nav-list tree despliegeMarcas">
+							<li><a href="#">submarca1</a></li>
+							<li><a href="#">submarca2</a></li>
+							<li><a href="#">submarca3</a></li>
+						</ul>
+					</li>
+					<li><label class="tree-toggle nav-header marcas">MARCA2</label>
+						<ul class="nav nav-list tree despliegeMarcas">
+							<li><a href="#">submarca1</a></li>
+							<li><a href="#">submarca2</a></li>
+							<li><a href="#">submarca3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<section class="contenidoColeccion col-md-10 col-lg-10">
+				<div class="galeriaColeccion row">
+					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
+						<a class="thumbnail" href="#">
+							<img class="img-responsive gallerythumb" src="../image/coleccion/vm1.jpg" alt="">
+					  </a>
+						<figure>
+							<figcaption>json:descripcion</figcaption>
+							<p>costo: </p>
+						</figure>
+          </div>
+					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
+						<a class="thumbnail" href="#">
+							<img class="img-responsive gallerythumb" src="../image/coleccion/vm2.jpg" alt="">
+					  </a>
+						<figure>
+							<figcaption>json:descripcion</figcaption>
+							<p>costo: </p>
+						</figure>
+          </div>
+					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
+						<a class="thumbnail" href="#">
+							<img class="img-responsive gallerythumb" src="../image/coleccion/vm3.jpg" alt="">
+					  </a>
+						<figure>
+							<figcaption>json:descripcion</figcaption>
+							<p>costo: </p>
+						</figure>
+          </div>
+					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
+						<a class="thumbnail" href="#">
+							<img class="img-responsive gallerythumb" src="../image/coleccion/vm4.jpg" alt="">
+					  </a>
+						<figure>
+							<figcaption>json:descripcion</figcaption>
+							<p>costo: </p>
+						</figure>
+          </div>
+					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
+						<a class="thumbnail" href="#">
+							<img class="img-responsive gallerythumb" src="../image/coleccion/vm5.jpg" alt="">
+					  </a>
+						<figure>
+							<figcaption>json:descripcion</figcaption>
+							<p>costo: </p>
+						</figure>
+          </div>
+					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
+						<a class="thumbnail" href="#">
+							<img class="img-responsive gallerythumb" src="../image/coleccion/vm6.jpg" alt="">
+					  </a>
+						<figure>
+							<figcaption>json:descripcion</figcaption>
+							<p>costo: </p>
+						</figure>
+          </div>
+				</div>
+			</section>
+		</div>
+	</section>
+	<!-- seccion informacion y Redes Sociales-->
+	<section class="container informacion">
+		<div class="row">
+			<section class="mails col-xs-12 col-sm-6 col-md-6">
+			<form>NEWSLETTER: <input type="email" name="email">
+				<input type="submit">
+			</form>
+		</section>
+			<section class="redesSociales col-xs-12 col-sm-6 col-md-6">
+			<h2>Redes Sociales</h2>
+			<ul>
+				<li class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></li>
+				<li class="btn btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></li>
+				<li class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></li>
+				<li class="btn btn-social-icon btn-pinterest"><span class="fa fa-pinterest"></span></li>
+			</ul>
+		</section>
+		</div>
+	</section>
+	<!-- Pie de pagina-->
+	<footer class="container">
+		<nav class="menuEmpresa">
+			<a href="#">La empresa</a>
+			<a href="#">Mision</a>
+			<a href="#">Vision</a>
+			<a href="#">Bolsas de trabajo</a>
+		</nav>
+	</footer>
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Mi JQuery-->
+  <script src="../js/myscript3.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: 'Josefin Slab', serif;
+	font-weight: bold;
+}
+.logo{
+	display: block;
+	margin: auto;
+}
+.menuSesion a{
+	margin:0 5px;
+	font-size: 12pt;
+	text-decoration: none;
+}
+.menuSesion div{
+	margin-top: 20px;
+}
+.menuSesion > div > a:visited{
+	color:red;
+}
+.menuSesion > div > a:link {
+    color: red;
+}
+.menuSesion div a:nth-child(1n+0)::after{
+	content: " | "
+}
+.menuSesion div a:last-child::after{
+	content: " ";
+}
+.submarca{
+	margin-left:15px;
+}
+img{
+	display: block;
+	margin: auto;
+	max-height: 400px;
+	width: auto;
+}
+.gallerythumb{
+	width: auto;
+	max-height: 200px;
+}
+#variante{
+	overflow: auto;
+	margin-top: 10px;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	display: inline-block;
+	font-size: 12pt;
+}
+.menuNavegacion li:hover{
+	background-color: #DD2424;
+}
+.container{
+	overflow: auto;
+}
+.navbar{
+	margin-bottom: 0;
+}
+.informacion{
+	background-color: #000;
+}
+h2, .mails>form{
+	color: #ffffff;
+	font-weight: bold;
+}
+input{
+	color: #000;
+}
+.mails{
+	margin: 25px auto;
+}
+.menuEmpresa{
+	margin: 10px 0;
+	padding: 10px 10px;
+	font-size: 12pt;
+}
