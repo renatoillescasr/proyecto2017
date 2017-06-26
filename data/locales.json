@@ -1,0 +1,17 @@
+[
+	{
+    "agencia":"CITY MALL",
+    "latitud":"-2.1413184",
+    "longitud":"-79.9117752"
+  },
+  {
+    "agencia":"MALL DEL SOL",
+    "latitud":"-2.1552748",
+    "longitud":"-79.8947843"
+  },
+	{
+    "agencia":"pruebas2",
+    "latitud":"-3.1552748",
+    "longitud":"-80.8947843"
+  }
+]

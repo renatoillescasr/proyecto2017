@@ -48,7 +48,7 @@
 						<li><a href="coleccion.html">Coleccion</a></li>
 				  	<li><a href="#">Promociones</a></li>
 						<li><a href="#">Saldo</a></li>
-						<li><a href="locales.html">Locales</a></li>
+						<li><a href="#">Locales</a></li>
 						<li><a href="#">Contacto</a></li>
 					</ul>
 				</div>
@@ -56,85 +56,22 @@
 		</nav>
 	</header>
 	<!-- seccion variante-->
-	<section id="variante" class="container">
-		<div class="container row">
-			<nav class="menuColeccion hidden-xs hidden-sm col-md-2 col-lg-2">
-				<ul class="nav nav-list">
-					<li><label class="tree-toggle nav-header marcas">MARCA 1</label>
-						<ul class="nav nav-list tree despliegeMarcas">
-							<li><a href="#">submarca1</a></li>
-							<li><a href="#">submarca2</a></li>
-							<li><a href="#">submarca3</a></li>
-						</ul>
-					</li>
-					<li><label class="tree-toggle nav-header marcas">MARCA2</label>
-						<ul class="nav nav-list tree despliegeMarcas">
-							<li><a href="#">submarca1</a></li>
-							<li><a href="#">submarca2</a></li>
-							<li><a href="#">submarca3</a></li>
-						</ul>
-					</li>
+	<section id="variantes" class="container">
+		<section class="row">
+			<div class="titulo">
+				<h2>LOCALES</h2>
+			</div>
+			<div class="col-sm-12 col-md-2 col-lg-2">
+				<ul id="locales">
+					<!-- RELLENO CON AJAX geolocalizacion.js con funcion "locales"-->
 				</ul>
-			</nav>
-			<section class="contenidoColeccion col-md-10 col-lg-10">
-				<div class="galeriaColeccion row">
-					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive gallerythumb" src="../image/coleccion/vm1.jpg" alt="">
-					  </a>
-						<figure>
-							<figcaption>json:descripcion</figcaption>
-							<p>costo: </p>
-						</figure>
-          </div>
-					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive gallerythumb" src="../image/coleccion/vm2.jpg" alt="">
-					  </a>
-						<figure>
-							<figcaption>json:descripcion</figcaption>
-							<p>costo: </p>
-						</figure>
-          </div>
-					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive gallerythumb" src="../image/coleccion/vm3.jpg" alt="">
-					  </a>
-						<figure>
-							<figcaption>json:descripcion</figcaption>
-							<p>costo: </p>
-						</figure>
-          </div>
-					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive gallerythumb" src="../image/coleccion/vm4.jpg" alt="">
-					  </a>
-						<figure>
-							<figcaption>json:descripcion</figcaption>
-							<p>costo: </p>
-						</figure>
-          </div>
-					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive gallerythumb" src="../image/coleccion/vm5.jpg" alt="">
-					  </a>
-						<figure>
-							<figcaption>json:descripcion</figcaption>
-							<p>costo: </p>
-						</figure>
-          </div>
-					<div class="col-lg-4 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive gallerythumb" src="../image/coleccion/vm6.jpg" alt="">
-					  </a>
-						<figure>
-							<figcaption>json:descripcion</figcaption>
-							<p>costo: </p>
-						</figure>
-          </div>
+			</div>
+			<div class="col-sm-12 col-md-10 col-lg-10">
+				<div id="map">
+					<!-- RELLENO CON AJAX geolocalizacion.js con funcion "myMap"-->
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 	</section>
 	<!-- seccion informacion y Redes Sociales-->
 	<section class="container informacion">
@@ -168,7 +105,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- BOOTSTRAP -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- Mi JQuery-->
-  <script src="../js/myscript3.js"></script>
-</body>
+  <!-- API GOOGLE MAPS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBumYjS-xRkQR2a0VSm7WiF1JfMELa65nM&callback=initMap"></script>
+  <!-- Mi JQuery-->
+  <script src="../js/geolocalizacion.js"></script>
+	</body>
 </html>
