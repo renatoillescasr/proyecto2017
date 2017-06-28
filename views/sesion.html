@@ -15,8 +15,11 @@
   <!-- ESTILO DE LA PAGINA -->
   <link rel="stylesheet" href="../css/estilo.css">
   <title>Pagina de Registro</title>
+  <script type="text/javascript">
+
+  </script>
 </head>
-<body ng-app="app">
+<body>
   <!-- Cabecera y menus navegacion-->
   <header class="container">
 		<section class="container row">
@@ -27,9 +30,9 @@
  		 </figure>
   		<nav class="navbar menuSesion col-xs-12 col-sm-10 col-md-10 ">
 				<div class="container-fluid nav navbar-nav navbar-right haber">
-					<a href="sesion.html">Registro</a>
-					<a href="sesion.html">Iniciar Sesion</a>
-					<a href="#">Mi Carrito</a>
+					<a id="registro" href="#registro">Registro</a>
+					<a id="iniciosesion" href="#iniciosesion">Iniciar Sesion</a>
+					<a id="carrito" href="sesion.html">Mi Carrito</a>
 				</div>
 			</nav>
 		</section>
@@ -45,10 +48,10 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav menuNavegacion">
 						<li><a href="index.html">Incio</a></li>
-						<li><a href="#">Coleccion</a></li>
+						<li><a href="coleccion.html">Coleccion</a></li>
 				  	<li><a href="#">Promociones</a></li>
 						<li><a href="#">Saldo</a></li>
-						<li><a href="#">Locales</a></li>
+						<li><a href="locales.html">Locales</a></li>
 						<li><a href="#">Contacto</a></li>
 					</ul>
 				</div>
@@ -57,10 +60,10 @@
 	</header>
   <!-- Seccion variante-->
   <section id="variante" class="container">
-    <p>prueba</p>
-      <!--<ng-include src="urlRegistro"></ng-include>-->
-      <!--<ng-include src="urlInicioSescion"></ng-include>-->
-
+    <p>falta: que traiga el evento jquery de click para entrar a la pagina</p>
+    <p>si das click aqui entre las opciones registro, inicio sesion embebe la paginas correspondientes</p>
+    <div id="prueba"></div>
+    <!-- Aqui se embebe la pagina "registro.html", "iniciosesion.html, "carrito.html" llamados por angular.js hecho en jquery-->
   </section>
   <!-- Informativa -->
   <section class="container informacion">
@@ -95,6 +98,6 @@
   <!-- BOOTSTRAP -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Mi JQuery-->
-  <script src="../js/myscript2.js"></script>
+  <script src="../js/miangular.js"></script>
   </body>
 </html>

@@ -25,7 +25,6 @@ function makeRequest(url) {
     http_request.onreadystatechange = alertContents;
     http_request.open('GET', url, true);
     http_request.send(null);
-
 }
 
 function alertContents() {
