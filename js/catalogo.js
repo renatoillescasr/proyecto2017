@@ -42,16 +42,6 @@ function alertContents() {
         }
     }
 }
-/*
-function menuJson(json){
-  var agregarItems = document.getElementById('menuColeccion');
-  for (i = 0; i < json.length; i++) {
-    var li = document.createElement('li');
-    var label = document.createElement('label');
-
-
-  }
-}*/
 
 function catalogo(json){
   var agregarItems = document.getElementById('galeriaColeccion');
@@ -68,7 +58,7 @@ function catalogo(json){
 
     var figure = document.createElement('figure');
     var img = document.createElement('img');
-    img.setAttribute("class","img-responsive gallerythumb");
+    img.setAttribute("class","imageGaleria img-responsive gallerythumb");
     img.setAttribute("src",json[i]['srcImagen']);
     figure.appendChild(img);
     a.appendChild(figure);
@@ -82,8 +72,9 @@ function catalogo(json){
     divDatos.appendChild(ul);
     var lidesc = document.createElement('li');
     var licosto = document.createElement('li');
+    licosto.setAttribute("class","costo");
     lidesc.textContent = json[i]['descripcion'];
-    licosto.textContent = json[i]['precio'];
+    licosto.textContent = "$ "+json[i]['precio'];
 
     ul.appendChild(lidesc);
     ul.appendChild(licosto);
