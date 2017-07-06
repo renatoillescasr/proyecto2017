@@ -45,7 +45,7 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav menuNavegacion">
 						<li><a href="index.html">Incio</a></li>
-						<li><a href="catalogo.html">Catalogo</a></li>
+						<li><a href="coleccion.html">Coleccion</a></li>
 				  	<li><a href="#">Promociones</a></li>
 						<li><a href="#">Saldo</a></li>
 						<li><a href="locales.html">Locales</a></li>
@@ -70,10 +70,49 @@
 				</ul>
 			</nav>
 			<section class="contenidoColeccion col-md-10 col-lg-10">
-				<div id="compras" class="row">
+					<!-- Escribir con javascript-->
+					<div id="compras" class="row">
 
-				</div>
-			</section>
+						<div class="col-sm-12 col-md-8">
+							<figure>
+								<img class="imagenVestido" src="../image/coleccion/vm2.jpg" alt="imagen"/>
+							</figure>
+						</div>
+						<div class="col-sm-12 col-md-3">
+							<div class="datosVestido">
+								<h3>nombre del vestido</h3>
+								<p class="costo">costo</p>
+								<p>descripcion</p>
+								<div class="row">
+
+									<form action="" method="get">
+										<div class="labels col-sm-4 col-lg-4">
+											<label class="" for="producto">Talla: </label>
+											<label class="" for="cantidad">Cantidad:</label>
+										</div>
+
+										<div class="inputs col-sm-4 col-lg-4">
+											<input id="producto" list="tallas" name="misProductos" placeholder="elegir" size="8">
+												<datalist id="tallas">
+													<option value="XL">XL</option>
+									        <option value="L">L</option>
+									        <option value="M">M</option>
+									        <option value="S">S</option>
+				  	  				  </datalist>
+											<input type="number" size="2" value="1" min="1" step="1" max="100" id="cantidad">
+										</div>
+
+										<div class="inputs">
+											<input type="submit" value="Anadir al carrito">
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
 		</div>
 	</section>
 	<!-- seccion informacion y Redes Sociales-->
@@ -108,7 +147,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- BOOTSTRAP -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- Mi JQuery-->
-  <script src="../js/cargardatoscompra.js"></script>
+	<!-- Mi JQuery
+  <script src="../js/catalogo.js"></script>-->
 </body>
 </html>

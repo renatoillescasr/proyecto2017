@@ -31,10 +31,11 @@ function alertContents() {
     if (http_request.readyState == 4) {
         if (http_request.status == 200) {
             var data = JSON.parse(http_request.responseText);
-            //datos JSON los almacena en un arreglo
+            /*datos JSON los almacena en un arreglo
             for(var x in data){
               gcatalogo.push(data[x]);
-            }
+              console.log(gcatalogo);
+            }*/
             //invoca la funcion catalogo para escribir el contenido en catalogo.html
             catalogo(data);
         } else {
@@ -53,7 +54,7 @@ function catalogo(json){
 
     var a = document.createElement('a');
     a.setAttribute("class","thumbnail");
-    a.setAttribute("href","#");
+    a.setAttribute("href","compras.html?producto_id="+json[i]['codigo']);
     divImagen.appendChild(a);
 
     var figure = document.createElement('figure');

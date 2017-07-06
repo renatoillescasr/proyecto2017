@@ -23,7 +23,6 @@ function prueba(){
       }
     });
     console.log(pagina);
-
   }
 }
 

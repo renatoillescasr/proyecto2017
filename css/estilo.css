@@ -10,6 +10,9 @@ body{
 	display: block;
 	margin: auto;
 }
+.labels{
+	
+}
 .menuSesion a{
 	margin:0 5px;
 	font-size: 12pt;
@@ -48,16 +51,26 @@ body{
 	max-height: 300px;
 	vertical-align: middle;
 }
-
 .thumbnail{
 	margin-bottom: 0;
 	display: block;
 }
+#variante{
+	overflow: auto;
+}
+#cuerpo{
+	margin: 10px 0;
+}
 .costo{
 	font-size: 20pt;
 }
-#variante{
-	overflow: auto;
+.imagenVestido{
+	width: 100%;
+	height: auto;
+}
+.datosVestido{
+	margin: auto;
+	width: 300px;
 }
 ul{
 	list-style-type: none;
