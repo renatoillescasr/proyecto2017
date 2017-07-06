@@ -40,10 +40,8 @@ function alertContents() {
                 console.log("valores iguales");
                 console.log(typeof datacodigo);
                 console.log(typeof codigoproducto);
-
                 gcompra.push(data[x]);
                 console.log(gcompra);
-                // llamada a la impresion en html
               }
             }
             compraCatalogo(gcompra);
@@ -119,13 +117,16 @@ function compraCatalogo(arreglo){
   labeltalla.textContent = "Talla";
   agregarform.appendChild(labeltalla);
   var inputtalla = document.createElement('input');
-  inputtalla.setAttribute("class","col-sm-4 col-lg-4");
+  var divinputtalla = document.createElement("div");
+  divinputtalla.setAttribute("class","col-sm-4 col-lg-4");
+  divinputtalla.appendChild(inputtalla);
+  inputtalla.setAttribute("class","form-control");
   inputtalla.setAttribute("id","producto");
   inputtalla.setAttribute("list","tallas");
   inputtalla.setAttribute("name","misProductos");
   inputtalla.setAttribute("placeholder","elegir");
   inputtalla.setAttribute("size","8");
-  agregarform.appendChild(inputtalla);
+  agregarform.appendChild(divinputtalla);
   var br = document.createElement('br');
   var br1 = document.createElement('br');
   agregarform.appendChild(br);
@@ -162,7 +163,10 @@ function compraCatalogo(arreglo){
   agregarform.appendChild(agregarCantidad);
 
   var inputcantidad = document.createElement('input');
-  inputcantidad.setAttribute("class","col-sm-3 col-lg-3");
+  var divinputcantidad = document.createElement('div');
+  divinputcantidad.setAttribute("class","col-sm-4 col-lg-4");
+  divinputcantidad.appendChild(inputcantidad);
+  inputcantidad.setAttribute("class","form-control ");
   inputcantidad.setAttribute("type","number");
   inputcantidad.setAttribute("size","2");
   inputcantidad.setAttribute("value","1");
@@ -170,15 +174,15 @@ function compraCatalogo(arreglo){
   inputcantidad.setAttribute("step","1");
   inputcantidad.setAttribute("max","100");
   inputcantidad.setAttribute("id","cantidad");
-  agregarform.appendChild(inputcantidad);
+  agregarform.appendChild(divinputcantidad);
   var br2 = document.createElement('br');
   var br3 = document.createElement('br');
   agregarform.appendChild(br2);
   agregarform.appendChild(br3);
 
-
   var agregarboton =document.createElement('input');
   agregarboton.setAttribute("type","submit");
+  agregarboton.setAttribute("class","btn btn-danger");
   agregarboton.setAttribute("value","Anadir al carrito");
   agregarform.appendChild(agregarboton);
 }

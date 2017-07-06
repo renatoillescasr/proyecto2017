@@ -85,26 +85,22 @@
 								<p>descripcion</p>
 								<div class="row">
 
-									<form action="" method="get">
+									<form action="micarrito.html" method="post">
 										<div class="labels col-sm-4 col-lg-4">
 											<label class="" for="producto">Talla: </label>
 											<label class="" for="cantidad">Cantidad:</label>
 										</div>
-
-										<div class="inputs col-sm-4 col-lg-4">
-											<input id="producto" list="tallas" name="misProductos" placeholder="elegir" size="8">
+										<div class="col-sm-4 col-lg-4">
+											<input id="producto" class="form-control" list="tallas" name="misProductos" placeholder="elegir" size="8">
 												<datalist id="tallas">
 													<option value="XL">XL</option>
 									        <option value="L">L</option>
 									        <option value="M">M</option>
 									        <option value="S">S</option>
 				  	  				  </datalist>
-											<input type="number" size="2" value="1" min="1" step="1" max="100" id="cantidad">
+											<input type="number" class="form-control" size="2" value="1" min="1" step="1" max="100" id="cantidad">
 										</div>
-
-										<div class="inputs">
-											<input type="submit" value="Anadir al carrito">
-										</div>
+										<input type="submit" value="Anadir al carrito" src="micarrito.html">
 									</form>
 
 								</div>
