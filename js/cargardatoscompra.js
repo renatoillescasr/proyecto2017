@@ -76,7 +76,7 @@ function compraCatalogo(arreglo){
 
   //se escribe el div que contendra la imagen clickeada
   var agregarContenedorImagen =  document.createElement('div');
-  agregarContenedorImagen.setAttribute("class","col-xs-12 col-sm-12 col-md-7 col-lg-7")
+  agregarContenedorImagen.setAttribute("class","col-xs-12 col-sm-12 col-md-8 col-lg-8")
   agregarCompra.appendChild(agregarContenedorImagen);
   agregarFigure = document.createElement('figure');
   agregarImg = document.createElement('img');
