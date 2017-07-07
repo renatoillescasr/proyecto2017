@@ -65,9 +65,17 @@ body{
 	width: 100%;
 	height: auto;
 }
+#compras{
+	border: 1px solid blue;
+	overflow: hidden;
+}
 .datosVestido{
-	margin: auto;
-	width: 300px;
+	margin: 0 25%;
+	display: block;
+	border: 1px solid red;
+}
+.botoncomprar{
+	margin-top: 10px;
 }
 ul{
 	list-style-type: none;

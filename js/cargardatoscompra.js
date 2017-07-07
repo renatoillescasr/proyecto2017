@@ -76,7 +76,7 @@ function compraCatalogo(arreglo){
 
   //se escribe el div que contendra la imagen clickeada
   var agregarContenedorImagen =  document.createElement('div');
-  agregarContenedorImagen.setAttribute("class","col-sm-12 col-md-8")
+  agregarContenedorImagen.setAttribute("class","col-xs-12 col-sm-12 col-md-7 col-lg-7")
   agregarCompra.appendChild(agregarContenedorImagen);
   agregarFigure = document.createElement('figure');
   agregarImg = document.createElement('img');
@@ -88,9 +88,9 @@ function compraCatalogo(arreglo){
   //se escribe el div que contendra los datos del vestido clickeada
   var agregarDatosVestido =  document.createElement('div');
   agregarCompra.appendChild(agregarDatosVestido);
-  agregarDatosVestido.setAttribute("class","col-sm-12 col-md-3");
+  agregarDatosVestido.setAttribute("class","col-xs-12 col-sm-12 col-md-4 col-lg-4");
   var contendorAuxImagen = document.createElement('div');
-  contendorAuxImagen.setAttribute("class","datosVestido");
+  contendorAuxImagen.setAttribute("class","datosVestido col-xs-6 col-sm-6 col-md-12");
   agregarDatosVestido.appendChild(contendorAuxImagen);
   var agregarh3 = document.createElement('h3');
   agregarh3.textContent = arreglo[0]['nombre'];
@@ -103,7 +103,7 @@ function compraCatalogo(arreglo){
   agregarpdescripcion.textContent = arreglo[0]['descripcion'];
   contendorAuxImagen.appendChild(agregarpdescripcion);
   var divDatos = document.createElement('div');
-  divDatos.setAttribute("class","row");
+  //divDatos.setAttribute("class","row");
   contendorAuxImagen.appendChild(divDatos);
 
   var agregarform = document.createElement('form');
@@ -112,13 +112,13 @@ function compraCatalogo(arreglo){
   divDatos.appendChild(agregarform);
 
   var labeltalla = document.createElement('label');
-  labeltalla.setAttribute("class","col-sm-3 col-lg-3");
+  labeltalla.setAttribute("class","col-xs-12 col-sm-4 col-md-4 col-lg-3");
   labeltalla.setAttribute("for","producto");
   labeltalla.textContent = "Talla";
   agregarform.appendChild(labeltalla);
   var inputtalla = document.createElement('input');
   var divinputtalla = document.createElement("div");
-  divinputtalla.setAttribute("class","col-sm-4 col-lg-4");
+  divinputtalla.setAttribute("class","col-xs-12 col-sm-5 col-md-6 col-lg-5");
   divinputtalla.appendChild(inputtalla);
   inputtalla.setAttribute("class","form-control");
   inputtalla.setAttribute("id","producto");
@@ -157,14 +157,14 @@ function compraCatalogo(arreglo){
   agregarDatalist.appendChild(agregaroptionS);
 
   var agregarCantidad = document.createElement('label');
-  agregarCantidad.setAttribute("class","col-sm-3 col-lg-3");
+  agregarCantidad.setAttribute("class","col-xs-12 col-sm-4 col-md-4 col-lg-3");
   agregarCantidad.setAttribute("for","cantidad");
   agregarCantidad.textContent = "Cantidad";
   agregarform.appendChild(agregarCantidad);
 
   var inputcantidad = document.createElement('input');
   var divinputcantidad = document.createElement('div');
-  divinputcantidad.setAttribute("class","col-sm-4 col-lg-4");
+  divinputcantidad.setAttribute("class","col-xs-12 col-sm-5 col-md-5 col-lg-5");
   divinputcantidad.appendChild(inputcantidad);
   inputcantidad.setAttribute("class","form-control ");
   inputcantidad.setAttribute("type","number");
@@ -182,7 +182,7 @@ function compraCatalogo(arreglo){
 
   var agregarboton =document.createElement('input');
   agregarboton.setAttribute("type","submit");
-  agregarboton.setAttribute("class","btn btn-danger");
+  agregarboton.setAttribute("class","botoncomprar btn btn-danger col-xs-12 col-sm-12 col-md-12 col-lg-12");
   agregarboton.setAttribute("value","Anadir al carrito");
   agregarform.appendChild(agregarboton);
 }
