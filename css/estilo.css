@@ -66,13 +66,11 @@ body{
 	height: auto;
 }
 #compras{
-	border: 1px solid blue;
 	overflow: hidden;
 }
 .datosVestido{
 	margin: 0 25%;
 	display: block;
-	border: 1px solid red;
 }
 .botoncomprar{
 	margin-top: 10px;
