@@ -37,9 +37,11 @@ function alertContents() {
               gcatalogo.push(data[x]);
               //console.log(gcatalogo);
             }
-            //invoca la funcion catalogo para escribir el contenido en
+            //invoca la funcion catalogo para escribir el contenido en catalogo.html
+            console.log(gcatalogo);
             menucategorias(gcatalogo);
             catalogo(gcatalogo);
+            //filtrar(gcatalogo);
         } else {
             alert('Hubo problemas con la peticion.');
         }
@@ -77,6 +79,7 @@ function escribirMenu(arreglo){
       avinculo.textContent = arreglo[i];
       licategoria.appendChild(avinculo);
       agregarcategorias.appendChild(licategoria);
+      //evento filtrar
   }
 }
 
@@ -86,7 +89,7 @@ function catalogo(arreglo){
   for (i = 0; i < arreglo.length; i++) {
     //llenados de imagen
     var divImagen = document.createElement('div');
-    divImagen.setAttribute("class","col-lg-4 col-md-4 col-xs-6 thumb");
+    divImagen.setAttribute("class", arreglo[i]['categoria'] + " col-lg-4 col-md-4 col-xs-6 thumb");
     agregarItems.appendChild(divImagen);
 
     var a = document.createElement('a');
@@ -118,49 +121,12 @@ function catalogo(arreglo){
     ul.appendChild(licosto);
   }
 }
-/*
-function filtrar(arreglo){
-  or (i = 0; i < arreglo.length; i++) {
-    if((arreglo[i]['categoria'])=="hola"){
-      //llenados de imagen
-      var divImagen = document.createElement('div');
-      divImagen.setAttribute("class","col-lg-4 col-md-4 col-xs-6 thumb");
-      agregarItems.appendChild(divImagen);
-      var a = document.createElement('a');
-      a.setAttribute("class","thumbnail");
-      a.setAttribute("href","compras.html?producto_id="+json[i]['codigo']);
-      divImagen.appendChild(a);
 
-      var figure = document.createElement('figure');
-      var img = document.createElement('img');
-      img.setAttribute("class","imageGaleria img-responsive gallerythumb");
-      img.setAttribute("src",json[i]['srcImagen']);
-      figure.appendChild(img);
-      a.appendChild(figure);
 
-      //llenado de los datos
-      var divDatos = document.createElement('div');
-      divDatos.setAttribute("class","datosgaleria");
-      divImagen.appendChild(divDatos);
-
-      var ul = document.createElement('ul');
-      divDatos.appendChild(ul);
-      var lidesc = document.createElement('li');
-      var licosto = document.createElement('li');
-      licosto.setAttribute("class","costo");
-      lidesc.textContent = json[i]['descripcion'];
-      licosto.textContent = "$ "+json[i]['precio'];
-
-      ul.appendChild(lidesc);
-      ul.appendChild(licosto);
-    }
-  }
-}
-*/
 window.onload = function() {
     makeRequest("../data/catalogo.json");
 
-    var link = document.querySelectorAll('#despliegeMarcas');
+    //var link = document.querySelectorAll('#despliegeMarcas');
     //console.log(link.childNodes);
     /*link.addEventListener("click", function(evt){
       console.log(link);
