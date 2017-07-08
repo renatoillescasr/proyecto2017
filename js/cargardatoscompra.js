@@ -90,7 +90,7 @@ function compraCatalogo(arreglo){
   agregarCompra.appendChild(agregarDatosVestido);
   agregarDatosVestido.setAttribute("class","col-xs-12 col-sm-12 col-md-4 col-lg-4");
   var contendorAuxImagen = document.createElement('div');
-  contendorAuxImagen.setAttribute("class","datosVestido col-xs-8 col-sm-8 col-md-12");
+  contendorAuxImagen.setAttribute("class","datosVestido col-xs-10 col-sm-8 col-md-12");
   agregarDatosVestido.appendChild(contendorAuxImagen);
   var agregarh3 = document.createElement('h3');
   agregarh3.textContent = arreglo[0]['nombre'];

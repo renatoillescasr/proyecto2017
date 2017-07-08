@@ -1,5 +1,6 @@
 var http_request = false;
 var gcatalogo = [];
+var gmenu = [];
 
 //------------------ AJAX -----------------------
 function makeRequest(url) {
@@ -31,22 +32,58 @@ function alertContents() {
     if (http_request.readyState == 4) {
         if (http_request.status == 200) {
             var data = JSON.parse(http_request.responseText);
-            /*datos JSON los almacena en un arreglo
+            //datos JSON los almacena en un arreglo
             for(var x in data){
               gcatalogo.push(data[x]);
-              console.log(gcatalogo);
-            }*/
+              //console.log(gcatalogo);
+            }
             //invoca la funcion catalogo para escribir el contenido en catalogo.html
-            catalogo(data);
+            menucategorias(gcatalogo);
+            catalogo(gcatalogo);
         } else {
             alert('Hubo problemas con la petición.');
         }
     }
 }
 
-function catalogo(json){
+//crea el menu de categoria de prendas (para filtrar)
+function menucategorias(arreglo){
+  var agregarcategorias = document.getElementById('despliegeMarcas');
+  gmenu.push(arreglo[0]['categoria']);
+  for (var i = 0; i < arreglo.length; i++) {
+    var encontro=0;
+    for(var j = 0; j < gmenu.length ; j++) {
+      if((arreglo[i]['categoria'])==(gmenu[j])){
+        encontro=1;
+      }
+    }
+    if(encontro==0){
+      gmenu.push(arreglo[i]['categoria']);
+      console.log(gmenu);
+    }
+  }
+  escribirMenu(gmenu);
+}
+
+//escribir menu de categorias por pantalla
+function escribirMenu(arreglo){
+  var agregarcategorias = document.getElementById('despliegeMarcas');
+  for (i = 0; i < arreglo.length; i++) {
+      console.log(arreglo.length);
+      //llenado submenu por categoria
+      var licategoria = document.createElement('li');
+      var avinculo = document.createElement('a');
+      avinculo.setAttribute("href","#");
+      avinculo.textContent = arreglo[i];
+      licategoria.appendChild(avinculo);
+      agregarcategorias.appendChild(licategoria);
+  }
+}
+
+//funcion para escribir la galeria en pantalla
+function catalogo(arreglo){
   var agregarItems = document.getElementById('galeriaColeccion');
-  for (i = 0; i < json.length; i++) {
+  for (i = 0; i < arreglo.length; i++) {
     //llenados de imagen
     var divImagen = document.createElement('div');
     divImagen.setAttribute("class","col-lg-4 col-md-4 col-xs-6 thumb");
@@ -54,13 +91,13 @@ function catalogo(json){
 
     var a = document.createElement('a');
     a.setAttribute("class","thumbnail");
-    a.setAttribute("href","compras.html?producto_id="+json[i]['codigo']);
+    a.setAttribute("href","compras.html?producto_id="+arreglo[i]['codigo']);
     divImagen.appendChild(a);
 
     var figure = document.createElement('figure');
     var img = document.createElement('img');
     img.setAttribute("class","imageGaleria img-responsive gallerythumb");
-    img.setAttribute("src",json[i]['srcImagen']);
+    img.setAttribute("src",arreglo[i]['srcImagen']);
     figure.appendChild(img);
     a.appendChild(figure);
 
@@ -74,15 +111,61 @@ function catalogo(json){
     var lidesc = document.createElement('li');
     var licosto = document.createElement('li');
     licosto.setAttribute("class","costo");
-    lidesc.textContent = json[i]['descripcion'];
-    licosto.textContent = "$ "+json[i]['precio'];
+    lidesc.textContent = arreglo[i]['descripcion'];
+    licosto.textContent = "$ "+arreglo[i]['precio'];
 
     ul.appendChild(lidesc);
     ul.appendChild(licosto);
+  }
+}
 
+function filtrar(arreglo,categoria){
+  or (i = 0; i < arreglo.length; i++) {
+    if((arreglo[i]['categoria'])=="hola"){
+      //llenados de imagen
+      var divImagen = document.createElement('div');
+      divImagen.setAttribute("class","col-lg-4 col-md-4 col-xs-6 thumb");
+      agregarItems.appendChild(divImagen);
+
+      var a = document.createElement('a');
+      a.setAttribute("class","thumbnail");
+      a.setAttribute("href","compras.html?producto_id="+json[i]['codigo']);
+      divImagen.appendChild(a);
+
+      var figure = document.createElement('figure');
+      var img = document.createElement('img');
+      img.setAttribute("class","imageGaleria img-responsive gallerythumb");
+      img.setAttribute("src",json[i]['srcImagen']);
+      figure.appendChild(img);
+      a.appendChild(figure);
+
+      //llenado de los datos
+      var divDatos = document.createElement('div');
+      divDatos.setAttribute("class","datosgaleria");
+      divImagen.appendChild(divDatos);
+
+      var ul = document.createElement('ul');
+      divDatos.appendChild(ul);
+      var lidesc = document.createElement('li');
+      var licosto = document.createElement('li');
+      licosto.setAttribute("class","costo");
+      lidesc.textContent = json[i]['descripcion'];
+      licosto.textContent = "$ "+json[i]['precio'];
+
+      ul.appendChild(lidesc);
+      ul.appendChild(licosto);
+    }
   }
 }
 
 window.onload = function() {
     makeRequest("../data/catalogo.json");
+
+    var link = document.querySelectorAll('#despliegeMarcas');
+    //console.log(link.childNodes);
+    /*link.addEventListener("click", function(evt){
+      console.log(link);
+      alert("onclick Event detected!   qqqqq");
+    });*/
+
 }
