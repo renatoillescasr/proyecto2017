@@ -15,6 +15,8 @@
 	<link rel="stylesheet" href="../css/bootstrap-social.css">
 	<!-- ESTILO DE LA PAGINA -->
 	<link rel="stylesheet" href="../css/estilo.css">
+  <!-- CSS PARA GRAFICA D3js-->
+  <link rel="stylesheet" href="../css/graficoD3.css">
 </head>
 <body>
 	<!-- Cabecera y menus navegacion-->
@@ -56,22 +58,13 @@
 		</nav>
 	</header>
 	<!-- seccion variante-->
-	<section id="variantes" class="container">
-		<section class="row">
-			<div class="titulo">
-				<h2>LOCALES</h2>
-			</div>
-			<div class="col-sm-12 col-md-2 col-lg-2">
-				<ul id="locales">
-					<!-- RELLENO CON AJAX geolocalizacion.js con funcion "locales"-->
-				</ul>
-			</div>
-			<div class="col-sm-12 col-md-10 col-lg-10">
-				<div id="map">
-					<!-- RELLENO CON AJAX geolocalizacion.js con funcion "myMap"-->
-				</div>
-			</div>
-		</section>
+	<section id="variante" class="container">
+
+    <h2>Grafica de costo vestidos y descuentos</h2>
+    <section id="graficaD3">
+
+    </section>
+
 	</section>
 	<!-- seccion informacion y Redes Sociales-->
 	<section class="container informacion">
@@ -105,9 +98,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- BOOTSTRAP -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- API GOOGLE MAPS -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBumYjS-xRkQR2a0VSm7WiF1JfMELa65nM&callback=initMap"></script>
-  <!-- Mi JQuery-->
-  <script src="../js/geolocalizacion.js"></script>
+	<!-- D3js -->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <!--mi grafica 3Djs-->
+  <script src="../js/graficoD3.js"></script>
 	</body>
 </html>

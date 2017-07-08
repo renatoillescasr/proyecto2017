@@ -3,66 +3,66 @@
     "codigo":"1",
 		"nombre":"vestido1",
     "marca":"MARCA1",
-		"categoria":"hola",
     "descripcion":"esta es la descripcion1",
+		"categoria":"hola",
 		"precio":"21",
     "tallas":["XL","L","M","S"],
 		"srcImagen":"../image/coleccion/vm1.jpg",
-		"promocion":""
+		"descuento":"5"
   },
 	{
     "codigo":"2",
 		"nombre":"vestido2",
-    "marca":"MARCA2",
-		"categoria":"si",
+    "marca":"MARCA1",
     "descripcion":"esta es la descripcion2",
+		"categoria":"si",
 		"precio":"31",
     "tallas":["XL","L","M","S"],
 		"srcImagen":"../image/coleccion/vm2.jpg",
-		"promocion":""
+		"descuento":"5"
   },
 	{
     "codigo":"3",
 		"nombre":"vestido3",
-    "marca":"MARCA3",
-		"categoria":"XX",
+    "marca":"MARCA2",
     "descripcion":"esta es la descripcion3",
+		"categoria":"hola",
 		"precio":"41",
     "tallas":["XL","L","M","S"],
 		"srcImagen":"../image/coleccion/vm3.jpg",
-		"promocion":""
+		"descuento":"10"
   },
 	{
     "codigo":"4",
 		"nombre":"vestido4",
-    "marca":"MARCA1",
-		"categoria":"hola",
+    "marca":"MARCA3",
     "descripcion":"esta es la descripcion3",
-		"precio":"51",
+		"categoria":"no",
+		"precio":"27",
     "tallas":["XL","L","M","S"],
 		"srcImagen":"../image/coleccion/vm4.jpg",
-		"promocion":""
+		"descuento":"8"
   },
 	{
     "codigo":"5",
 		"nombre":"vestido5",
-    "marca":"MARCA1",
-		"categoria":"no",
+    "marca":"MARCA3",
     "descripcion":"esta es la descripcion3",
+		"categoria":"hola",
 		"precio":"61",
     "tallas":["XL","L","M","S"],
 		"srcImagen":"../image/coleccion/vm5.jpg",
-		"promocion":""
+		"descuento":"6"
   },
 	{
     "codigo":"6",
 		"nombre":"vestido6",
-    "marca":"MARCA1",
-		"categoria":"no",
+    "marca":"marca6",
     "descripcion":"esta es la descripcion3",
+		"categoria":"si",
 		"precio":"71",
     "tallas":["XL","L","M","S"],
 		"srcImagen":"../image/coleccion/vm6.jpg",
-		"promocion":""
+		"descuento":"3"
   }
 ]
