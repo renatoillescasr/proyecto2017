@@ -37,11 +37,12 @@ function alertContents() {
               gcatalogo.push(data[x]);
               //console.log(gcatalogo);
             }
-            //invoca la funcion catalogo para escribir el contenido en catalogo.html
+            //invoca la funcion catalogo para escribir el contenido en
+catalogo.html
             menucategorias(gcatalogo);
             catalogo(gcatalogo);
         } else {
-            alert('Hubo problemas con la petición.');
+            alert('Hubo problemas con la peticiÃ³n.');
         }
     }
 }
@@ -91,13 +92,13 @@ function catalogo(arreglo){
 
     var a = document.createElement('a');
     a.setAttribute("class","thumbnail");
-    a.setAttribute("href","compras.html?producto_id="+arreglo[i]['codigo']);
+    a.setAttribute("href","compras.html?producto_id="+arreglo[i]
+['codigo']);
     divImagen.appendChild(a);
 
     var figure = document.createElement('figure');
     var img = document.createElement('img');
-    img.setAttribute("class","imageGaleria img-responsive gallerythumb");
-    img.setAttribute("src",arreglo[i]['srcImagen']);
+    img.setAttribute("class","imageGaleria img-responsive gallerythumb");    img.setAttribute("src",arreglo[i]['srcImagen']);
     figure.appendChild(img);
     a.appendChild(figure);
 
@@ -118,23 +119,26 @@ function catalogo(arreglo){
     ul.appendChild(licosto);
   }
 }
-
-function filtrar(arreglo,categoria){
+/*
+function filtrar(arreglo){
   or (i = 0; i < arreglo.length; i++) {
     if((arreglo[i]['categoria'])=="hola"){
       //llenados de imagen
       var divImagen = document.createElement('div');
-      divImagen.setAttribute("class","col-lg-4 col-md-4 col-xs-6 thumb");
+      divImagen.setAttribute("class","col-lg-4 col-md-4 col-xs-6
+thumb");
       agregarItems.appendChild(divImagen);
 
       var a = document.createElement('a');
       a.setAttribute("class","thumbnail");
-      a.setAttribute("href","compras.html?producto_id="+json[i]['codigo']);
+      a.setAttribute("href","compras.html?producto_id="+json[i]
+['codigo']);
       divImagen.appendChild(a);
 
       var figure = document.createElement('figure');
       var img = document.createElement('img');
-      img.setAttribute("class","imageGaleria img-responsive gallerythumb");
+      img.setAttribute("class","imageGaleria img-responsive
+gallerythumb");
       img.setAttribute("src",json[i]['srcImagen']);
       figure.appendChild(img);
       a.appendChild(figure);
@@ -157,7 +161,7 @@ function filtrar(arreglo,categoria){
     }
   }
 }
-
+*/
 window.onload = function() {
     makeRequest("../data/catalogo.json");
 
