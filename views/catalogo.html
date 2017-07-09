@@ -27,8 +27,8 @@
 			</figure>
 			<nav class="navbar menuSesion col-xs-12 col-sm-10 col-md-10 ">
 				<div class="container-fluid nav navbar-nav navbar-right">
-					<a id="registro" href="sesion.html">Registro</a>
-					<a id="iniciosesion" href="sesion.html">Iniciar Sesion</a>
+					<a id="registro" href="registro.html">Registro</a>
+					<a id="iniciosesion" href="iniciosesion.html">Iniciar Sesion</a>
 					<a id="carrito" href="micarrito.html">Mi Carrito</a>
 				</div>
 			</nav>
@@ -57,22 +57,27 @@
 	</header>
 	<!-- seccion variante-->
 	<section id="variante" class="container">
-  <!-- lectura desde un json-->
 		<div id="cuerpo" class="row">
 			<nav class="hidden-xs hidden-sm col-md-2 col-lg-2">
 				<ul class="menuColeccion nav nav-list">
-
-					<li><label class="tree-toggle nav-header marcas">MARCA 1</label>
+					<li><label class="tree-toggle nav-header marcas">MARCAS</label>
 						<ul id="despliegeMarcas" class="nav nav-list tree">
-
+							<li><a href=""><span class="active">marca 1</span></a></li>
+							<li><a href="">marca 2</a></li>
 						</ul>
 					</li>
-
 				</ul>
 			</nav>
 			<section class="contenidoColeccion col-md-10 col-lg-10">
 				<div id="galeriaColeccion" class="row">
-					<!-- aqui se escribe el contenido de catalogo.json-->
+					<div id="compras" class="row">
+						<div id="marca1">
+							<!-- lee desde el json -->
+						</div>
+						<div id="marca2">
+							<!-- lee desde el json -->
+						</div>
+					</div>
 				</div>
 			</section>
 		</div>
@@ -110,7 +115,6 @@
 	<!-- BOOTSTRAP -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- Mi JQuery-->
-  <script src="../js/catalogo.js"></script>
-  <script src="../js/myscript3.js"></script>
-</body>
+  <script src="../js/compra.js"></script>
+  </body>
 </html>
