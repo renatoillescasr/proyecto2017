@@ -1,8 +1,11 @@
-var http_request = false;
-var gcatalogo = [];
-var gmenu = [];
+var http_request = false,
+ gcatalogo = [],
+ url  = "../data/catalogo.json",
+ url2 = "../data/paraprueba.json";
+// gmenu = [];
 
 //------------------ AJAX -----------------------
+
 function makeRequest(url) {
     http_request = false;
     if (window.XMLHttpRequest) { // Mozilla, Safari,...
@@ -37,16 +40,14 @@ function alertContents() {
               gcatalogo.push(data[x]);
               //console.log(gcatalogo);
             }
-            //invoca la funcion catalogo para escribir el contenido en
-catalogo.html
-            menucategorias(gcatalogo);
+            //invoca la funcion catalogo para escribir el contenido en catalogo.html            //menucategorias(gcatalogo);
             catalogo(gcatalogo);
         } else {
-            alert('Hubo problemas con la peticiÃ³n.');
+            alert('Hubo problemas con la peticion.');
         }
     }
 }
-
+/*
 //crea el menu de categoria de prendas (para filtrar)
 function menucategorias(arreglo){
   var agregarcategorias = document.getElementById('despliegeMarcas');
@@ -65,7 +66,6 @@ function menucategorias(arreglo){
   }
   escribirMenu(gmenu);
 }
-
 //escribir menu de categorias por pantalla
 function escribirMenu(arreglo){
   var agregarcategorias = document.getElementById('despliegeMarcas');
@@ -80,7 +80,7 @@ function escribirMenu(arreglo){
       agregarcategorias.appendChild(licategoria);
   }
 }
-
+*/
 //funcion para escribir la galeria en pantalla
 function catalogo(arreglo){
   var agregarItems = document.getElementById('galeriaColeccion');
@@ -92,9 +92,7 @@ function catalogo(arreglo){
 
     var a = document.createElement('a');
     a.setAttribute("class","thumbnail");
-    a.setAttribute("href","compras.html?producto_id="+arreglo[i]
-['codigo']);
-    divImagen.appendChild(a);
+    a.setAttribute("href","compras.html?producto_id="+arreglo[i]['codigo']);    divImagen.appendChild(a);
 
     var figure = document.createElement('figure');
     var img = document.createElement('img');
@@ -109,10 +107,12 @@ function catalogo(arreglo){
 
     var ul = document.createElement('ul');
     divDatos.appendChild(ul);
+
     var lidesc = document.createElement('li');
+    lidesc.textContent = arreglo[i]['descripcion'];
+    
     var licosto = document.createElement('li');
     licosto.setAttribute("class","costo");
-    lidesc.textContent = arreglo[i]['descripcion'];
     licosto.textContent = "$ "+arreglo[i]['precio'];
 
     ul.appendChild(lidesc);
@@ -125,21 +125,15 @@ function filtrar(arreglo){
     if((arreglo[i]['categoria'])=="hola"){
       //llenados de imagen
       var divImagen = document.createElement('div');
-      divImagen.setAttribute("class","col-lg-4 col-md-4 col-xs-6
-thumb");
-      agregarItems.appendChild(divImagen);
+      divImagen.setAttribute("class","col-lg-4 col-md-4 col-xs-6 thumb");      agregarItems.appendChild(divImagen);
 
       var a = document.createElement('a');
       a.setAttribute("class","thumbnail");
-      a.setAttribute("href","compras.html?producto_id="+json[i]
-['codigo']);
-      divImagen.appendChild(a);
+      a.setAttribute("href","compras.html?producto_id="+json[i]['codigo']);      divImagen.appendChild(a);
 
       var figure = document.createElement('figure');
       var img = document.createElement('img');
-      img.setAttribute("class","imageGaleria img-responsive
-gallerythumb");
-      img.setAttribute("src",json[i]['srcImagen']);
+      img.setAttribute("class","imageGaleria img-responsive gallerythumb");      img.setAttribute("src",json[i]['srcImagen']);
       figure.appendChild(img);
       a.appendChild(figure);
 
@@ -164,12 +158,9 @@ gallerythumb");
 */
 window.onload = function() {
     makeRequest("../data/catalogo.json");
-
-    var link = document.querySelectorAll('#despliegeMarcas');
     //console.log(link.childNodes);
     /*link.addEventListener("click", function(evt){
       console.log(link);
       alert("onclick Event detected!   qqqqq");
     });*/
-
 }

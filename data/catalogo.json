@@ -1,4 +1,4 @@
-[
+{ "catalogo":[
 	{
     "codigo":"1",
 		"nombre":"vestido1",
@@ -24,7 +24,7 @@
 	{
     "codigo":"3",
 		"nombre":"vestido3",
-    "marca":"MARCA2",
+    "marca":"MARCA1",
     "descripcion":"esta es la descripcion3",
 		"categoria":"hola",
 		"precio":"41",
@@ -35,7 +35,7 @@
 	{
     "codigo":"4",
 		"nombre":"vestido4",
-    "marca":"MARCA3",
+    "marca":"MARCA1",
     "descripcion":"esta es la descripcion3",
 		"categoria":"no",
 		"precio":"27",
@@ -46,7 +46,7 @@
 	{
     "codigo":"5",
 		"nombre":"vestido5",
-    "marca":"MARCA3",
+    "marca":"MARCA1",
     "descripcion":"esta es la descripcion3",
 		"categoria":"hola",
 		"precio":"61",
@@ -57,7 +57,7 @@
 	{
     "codigo":"6",
 		"nombre":"vestido6",
-    "marca":"marca6",
+    "marca":"MARCA1",
     "descripcion":"esta es la descripcion3",
 		"categoria":"si",
 		"precio":"71",
@@ -66,3 +66,4 @@
 		"descuento":"3"
   }
 ]
+}

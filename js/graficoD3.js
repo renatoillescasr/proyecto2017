@@ -20,7 +20,6 @@ var yAxisLeft = d3.svg.axis()
 
 var yAxisRight = d3.svg.axis().scale(y1).ticks(6).orient("right");
 
-
 // add the SVG element
 var svg = d3.select("#graficaD3").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -32,17 +31,18 @@ var svg = d3.select("#graficaD3").append("svg")
 
 // load the data
 d3.json("../data/catalogo.json", function(error, data) {
-  data.forEach(function(d) {
-    d.marca = d.marca;
+  data.catalogo.forEach(function(d){
+  //data.forEach(function(d) {
+    d.nombre = d.nombre;
     d.precio = +d.precio;
     d.descuento = +d.descuento;
     console.log(d.descuento);
   });
 
 // scale the range of the data
-x.domain(data.map(function(d) { return d.marca; }));
-y0.domain([0, d3.max(data, function(d) { return d.precio; })]);
-y1.domain([0, d3.max(data, function(d) { return d.descuento; })]);
+x.domain(data.catalogo.map(function(d) { return d.nombre; }));
+y0.domain([0, d3.max(data.catalogo, function(d) { return d.precio; })]);
+y1.domain([0, d3.max(data.catalogo, function(d) { return d.descuento; })]);
 
 // add axis
 svg.append("g")
@@ -73,21 +73,19 @@ svg.append("g")
 
 
 // Add bar chart
-bars = svg.selectAll(".bar").data(data).enter();
-bars.append("rect")
+bars = svg.selectAll(".bar").data(data.catalogo).enter();
+  bars.append("rect")
     .attr("class", "bar1")
-    .attr("x", function(d) { return x(d.marca); })
+    .attr("x", function(d) { return x(d.nombre); })
     .attr("width", x.rangeBand()/2)
     .attr("y", function(d) { return y0(d.precio); })
-  .attr("height", function(d) { return height - y0(d.precio); });
+    .attr("height", function(d) { return height - y0(d.precio); });
 
-
-    bars.append("rect")
-        .attr("class", "bar2")
-        .attr("x", function(d) { return x(d.marca) + x.rangeBand()/2; })
-        .attr("width", x.rangeBand()/2)
-        .attr("y", function(d) { return y1(d.descuento); })
-  	  .attr("height", function(d) { return height - y1(d.descuento); });
-
+  bars.append("rect")
+    .attr("class", "bar2")
+    .attr("x", function(d) { return x(d.nombre) + x.rangeBand()/2; })
+    .attr("width", x.rangeBand()/2)
+    .attr("y", function(d) { return y1(d.descuento); })
+  	.attr("height", function(d) { return height - y1(d.descuento); });
 
 });

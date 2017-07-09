@@ -1,5 +1,8 @@
-var http_request = false;
-var gcompra = [];
+var http_request = false,
+ gcatalogo =[],
+ gcompra = [],
+ url;
+// gmenu = [];
 
 //------------------ AJAX -----------------------
 function makeRequest(url) {
@@ -31,19 +34,23 @@ function alertContents() {
     if (http_request.readyState == 4) {
         if (http_request.status == 200) {
             var data = JSON.parse(http_request.responseText);
+            console.log(data);
             var valores = getDeUrl();
             //datos JSON los almacena en un arreglo
-            for(var x in data){
-              var datacodigo = parseInt(data[x].codigo)
+            data.catalogo.forEach(function(item){
+              console.log(item.marca);
+              var datacodigo = parseInt(item.codigo);
+              console.log(item.codigo);
               var codigoproducto = parseInt(valores.producto_id);
               if(datacodigo == codigoproducto){
                 console.log("valores iguales");
                 console.log(typeof datacodigo);
                 console.log(typeof codigoproducto);
-                gcompra.push(data[x]);
+                gcompra.push(item);
                 console.log(gcompra);
               }
-            }
+            })
+            //menucategorias(data);
             compraCatalogo(gcompra);
           } else {
             alert('Hubo problemas con la peticion.');
@@ -58,8 +65,10 @@ function getDeUrl(){
   if(loc.indexOf('?')>0){
     // cogemos la parte de la url que hay despues del interrogante
     var getString = loc.split('?')[1];
+    //console.log("extrae " + getString);
     // obtenemos un array con cada clave=valor
     var GET = getString.split('&');
+    //console.log(GET);
     var get = {};
 
     // recorremos todo el array de valores
@@ -67,6 +76,9 @@ function getDeUrl(){
       var tmp = GET[i].split('=');
       get[tmp[0]] = unescape(decodeURI(tmp[1]));
     }
+    //console.log(get);
+    //console.log(get['marca']);
+    //console.log(get['producto_id']);
     return get;
   }
 }
@@ -123,7 +135,7 @@ function compraCatalogo(arreglo){
   inputtalla.setAttribute("class","form-control");
   inputtalla.setAttribute("id","producto");
   inputtalla.setAttribute("list","tallas");
-  inputtalla.setAttribute("name","misProductos");
+  inputtalla.setAttribute("name","producto_id");
   inputtalla.setAttribute("placeholder","elegir");
   inputtalla.setAttribute("size","8");
   agregarform.appendChild(divinputtalla);
@@ -180,13 +192,82 @@ function compraCatalogo(arreglo){
   agregarform.appendChild(br2);
   agregarform.appendChild(br3);
 
-  var agregarboton =document.createElement('input');
+  var agregarboton = document.createElement('input');
   agregarboton.setAttribute("type","submit");
   agregarboton.setAttribute("class","botoncomprar btn btn-danger col-xs-12 col-sm-12 col-md-12 col-lg-12");
   agregarboton.setAttribute("value","Anadir al carrito");
+  agregarboton.setAttribute("onclick","comprobar()");
   agregarform.appendChild(agregarboton);
 }
-
-window.onload = function(){
-    makeRequest("../data/catalogo.json");
+/*
+//crea el menu de categoria de prendas (para filtrar)
+function menucategorias(arreglo){
+  var agregarcategorias = document.getElementById('despliegeMarcas');
+  gmenu.push(arreglo[0]['categoria']);
+  for (var i = 0; i < arreglo.length; i++) {
+    var encontro=0;
+    for(var j = 0; j < gmenu.length ; j++) {
+      if((arreglo[i]['categoria'])==(gmenu[j])){
+        encontro=1;
+      }
+    }
+    if(encontro==0){
+      gmenu.push(arreglo[i]['categoria']);
+      console.log(gmenu);
+    }
+  }
+  escribirMenu(gmenu);
 }
+//escribir menu de categorias por pantalla
+function escribirMenu(arreglo){
+  var agregarcategorias = document.getElementById('despliegeMarcas');
+  for (i = 0; i < arreglo.length; i++) {
+      console.log(arreglo.length);
+      //llenado submenu por categoria
+      var licategoria = document.createElement('li');
+      var avinculo = document.createElement('a');
+      avinculo.setAttribute("href","#");
+      avinculo.textContent = arreglo[i];
+      licategoria.appendChild(avinculo);
+      agregarcategorias.appendChild(licategoria);
+  }
+}
+*/
+window.onload = function(){
+  var valores = getDeUrl();
+  console.log(typeof valores['marca']);
+  if(valores['marca']=="MARCA1"){
+    url = "../data/catalogo.json";
+    console.log(url);
+  }else{
+    url = "../data/marca2.json";
+    console.log(url);
+  }
+  makeRequest(url);
+}
+
+/*
+function comprobar(){
+  var text = document.getElementById("producto"),
+      element = document.getElementById("tallas");
+
+  if(element.querySelector("option[value='"+text.value+"']"))
+    alert(option[value='"+text.value+"']);
+  else
+    alert("Mal");
+}
+
+function prueba(){
+  let pagina;
+  var ejer = document.querySelectorAll('.haber>a');
+  for(var i=0 ; i < ejer.length ; i++){
+    let titulo = ejer[i].innerHTML;
+
+    ejer[i].addEventListener("click", function(){
+      if(titulo=="Registro"){
+        pagina="registro.html";
+      }
+    });
+    console.log(pagina);
+  }
+}*/
