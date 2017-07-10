@@ -196,7 +196,7 @@ function compraCatalogo(arreglo){
   agregarboton.setAttribute("type","submit");
   agregarboton.setAttribute("class","botoncomprar btn btn-danger col-xs-12 col-sm-12 col-md-12 col-lg-12");
   agregarboton.setAttribute("value","Anadir al carrito");
-  agregarboton.setAttribute("onclick","comprobar()");
+  agregarboton.setAttribute("formaction","micarrito.html");
   agregarform.appendChild(agregarboton);
 }
 /*
@@ -236,11 +236,11 @@ function escribirMenu(arreglo){
 window.onload = function(){
   var valores = getDeUrl();
   console.log(typeof valores['marca']);
-  if(valores['marca']=="MARCA1"){
-    url = "../data/catalogo.json";
+  if(valores['marca']=="GraceKarin"){
+    url = "../data/catalogo1.json";
     console.log(url);
   }else{
-    url = "../data/marca2.json";
+    url = "../data/catalogo2.json";
     console.log(url);
   }
   makeRequest(url);

@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="autor" content="Renato Illescas, Lenin Tenecela">
-  <!-- BOOTSTRAP -->
+  <meta name="autor" content="Renato Illescas, Lenin Tenecela"><meta name="description" content="Sitio web de venta de vestidos por catalogo para mujeres">
+	<meta name="keywords" content="vestidos, mujeres, prendas, gala">
+	<!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- FONTS AWESONE  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,7 +16,6 @@
   <!-- ESTILO DE LA PAGINA -->
   <link rel="stylesheet" href="../css/estilo.css">
   <title>Pagina de Registro</title>
-  </script>
 </head>
 <body>
   <!-- Cabecera y menus navegacion-->
@@ -28,9 +28,9 @@
  		 </figure>
   		<nav class="navbar menuSesion col-xs-12 col-sm-10 col-md-10 ">
 				<div class="container-fluid nav navbar-nav navbar-right haber">
-					<a id="registro" href="registro.html">Registro</a>
-					<a id="iniciosesion" href="iniciosesion.html">Iniciar Sesion</a>
-					<a id="carrito" href="micarrito.html">Mi Carrito</a>
+          <a id="registro" href="registro.html"><span class="glyphicon glyphicon-list-alt"></span> Registrate</a>
+					<a id="iniciosesion" href="iniciosesion.html"><span class="glyphicon glyphicon-user"></span> Iniciar Sesion</a>
+					<a id="carrito" href="micarrito.html"><span class="glyphicon glyphicon-shopping-cart"></span> Mi Carrito</a>
 				</div>
 			</nav>
 		</section>
@@ -45,23 +45,21 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav menuNavegacion">
-						<li><a href="index.html">Incio</a></li>
+            <li><a href="index.html">Inicio</a></li>
 						<li><a href="catalogo.html">Catalogo</a></li>
-            <li><a href="#">Promociones</a></li>
-						<li><a href="#">Saldo</a></li>
-						<li><a href="locales.html">Locales</a></li>
-						<li><a href="#">Contacto</a></li>
+						<li><a href="tiendas.html">Tiendas</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-  <!-- Seccion variante-->
-  <section id="variante" class="container">
-
+  <!-- seccion de cambio para contenido de la pagina-->
+	<section id="variante" class="container">
+    <div id="cuerpo" class="row">
     <!-- FORMULARIO -->
     <div class="container row">
-      <h4>PARA INICIO DE SESION</h4>
+      <h3>INICIO DE SESION</h3>
       <form class="form-horizontal" action="#" name="iniciosesion" method="get" autocomplete="on">
 
         <div class="form-group">
@@ -92,9 +90,9 @@
   <section class="container informacion">
 		<div class="row">
       <section class="mails col-xs-12 col-sm-6 col-md-6">
-        <form>NEWSLETTER: <input type="email" name="email">
-  				<input type="submit">
-  			</form>
+        <form><span class="glyphicon glyphicon-envelope"></span> NOTICIAS: <input type="email" name="email"  required="required">
+          <input type="submit">
+        </form>
   		</section>
   		<section class="redesSociales col-xs-12 col-sm-6 col-md-6">
         <h2>Redes Sociales</h2>
@@ -110,11 +108,12 @@
   <!-- Pie de pagina-->
   <footer class="container">
   	<nav class="menuEmpresa">
-  		<a href="graficoD3.html">La empresa</a>
-  		<a href="#">Mision</a>
-  		<a href="#">Vision</a>
-  		<a href="#">Bolsas de trabajo</a>
-  	</nav>
+  		<a href="#">La Empresa -</a>
+  		<a href="#"> Mision -</a>
+  		<a href="#"> Vision</a>
+      <a id="administracion" href="graficoD3.html"><span class="glyphicon glyphicon-eye-open"></span> Administracion</a>
+		</nav>
+		<h4 id="derechos"><span class="glyphicon glyphicon-copyright-mark"> Derechos Reservados</span></h4>
   </footer>
   <!-- JQUERY -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

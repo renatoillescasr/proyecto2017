@@ -1,0 +1,32 @@
+{ "catalogo":[
+		{
+	    "codigo":"10",
+			"nombre":"free",
+	    "marca":"Kate",
+	    "descripcion":"Vestido color azul, negro, blanco informal",
+			"precio":"31",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion2/vm10.jpg",
+			"descuento":"0"
+	  },
+	  {
+	    "codigo":"11",
+			"nombre":"join",
+	    "marca":"Kate",
+	    "descripcion":"vestido juvenil tonalidad celeste",
+			"precio":"21",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion2/vm11.jpg",
+			"descuento":"0"
+	  },
+		{
+	    "codigo":"12",
+			"nombre":"marina",
+	    "marca":"Kate",
+	    "descripcion":"Vestido azul marino",
+			"precio":"42",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion2/vm12.jpg"
+		}
+	]
+}

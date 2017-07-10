@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="autor" content="Renato Illescas, Lenin Tenecela">
+	<meta name="description" content="Sitio web de venta de vestidos por catalogo para mujeres">
+	<meta name="keywords" content="vestidos, mujeres, prendas, gala">
 	<!-- BOOTSTRAP -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- FONTS AWESONE  -->
@@ -29,9 +31,9 @@
 			</figure>
 			<nav class="navbar menuSesion col-xs-12 col-sm-10 col-md-10 ">
 				<div class="container-fluid nav navbar-nav navbar-right">
-					<a id="registro" href="registro.html">Registro</a>
-					<a id="iniciosesion" href="iniciosesion.html">Iniciar Sesion</a>
-					<a id="carrito" href="micarrito.html">Mi Carrito</a>
+					<a id="registro" href="registro.html"><span class="glyphicon glyphicon-list-alt"></span> Registrate</a>
+					<a id="iniciosesion" href="iniciosesion.html"><span class="glyphicon glyphicon-user"></span> Iniciar Sesion</a>
+					<a id="carrito" href="micarrito.html"><span class="glyphicon glyphicon-shopping-cart"></span> Mi Carrito</a>
 				</div>
 			</nav>
 		</section>
@@ -48,21 +50,19 @@
 					<ul class="nav navbar-nav menuNavegacion">
 						<li><a href="index.html">Inicio</a></li>
 						<li><a href="catalogo.html">Catalogo</a></li>
-						<li><a href="#">Promociones</a></li>
-						<li><a href="#">Saldo</a></li>
-						<li><a href="locales.html">Locales</a></li>
-						<li><a href="#">Contacto</a></li>
+						<li><a href="tiendas.html">Tiendas</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<!-- seccion variante-->
+	<!-- seccion de cambio para contenido de la pagina-->
 	<section id="variante" class="container">
 
-    <h2>Grafica de costo vestidos y descuentos</h2>
+    <h2>Grafica de costo - Vestido vs Descuento</h2>
     <section id="graficaD3">
-
+			<!-- escritura del grafico desde datos de json-->
     </section>
 
 	</section>
@@ -70,9 +70,9 @@
 	<section class="container informacion">
 		<div class="row">
 			<section class="mails col-xs-12 col-sm-6 col-md-6">
-			<form>NEWSLETTER: <input type="email" name="email">
-				<input type="submit">
-			</form>
+				<form><span class="glyphicon glyphicon-envelope"></span> NOTICIAS: <input type="email" name="email" required="required">
+					<input type="submit">
+				</form>
 		</section>
 			<section class="redesSociales col-xs-12 col-sm-6 col-md-6">
 			<h2>Redes Sociales</h2>
@@ -88,11 +88,12 @@
 	<!-- Pie de pagina-->
 	<footer class="container">
 		<nav class="menuEmpresa">
-			<a href="graficoD3.html">La empresa</a>
-			<a href="#">Mision</a>
-			<a href="#">Vision</a>
-			<a href="#">Bolsas de trabajo</a>
+			<a href="#">La Empresa -</a>
+			<a href="#"> Mision -</a>
+			<a href="#"> Vision</a>
+			<a id="administracion" href="administracion.html"><span class="glyphicon glyphicon-eye-open"></span> Administracion</a>
 		</nav>
+		<h4 id="derechos"><span class="glyphicon glyphicon-copyright-mark"></span> Derechos Reservados</h4>
 	</footer>
 	<!-- JQUERY -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

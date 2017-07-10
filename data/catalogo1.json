@@ -1,0 +1,63 @@
+{ "catalogo":[
+		{
+	    "codigo":"23",
+			"nombre":"isabella",
+	    "marca":"GraceKarin",
+	    "descripcion":"Vestido falda corta negro con blanco",
+			"precio":"45",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion/vm1.jpg",
+			"descuento":"0"
+	  },
+		{
+	    "codigo":"24",
+			"nombre":"gaia",
+	    "marca":"GraceKarin",
+	    "descripcion":"Vestido cafe con negro y encaje",
+			"precio":"63",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion/vm2.jpg",
+			"descuento":"0"
+	  },
+		{
+	    "codigo":"25",
+			"nombre":"Black",
+	    "marca":"GraceKarin",
+	    "descripcion":"Vestido formal entero, color negro",
+			"precio":"50",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion/vm3.jpg",
+			"descuento":"2"
+	  },
+		{
+	    "codigo":"26",
+			"nombre":"novia",
+	    "marca":"GraceKarin",
+	    "descripcion":"Vestido falda de novia",
+			"precio":"87",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion/vm4.jpg",
+			"descuento":"3"
+	  },
+		{
+	    "codigo":"27",
+			"nombre":"Gala",
+	    "marca":"GraceKarin",
+	    "descripcion":"Vestido formal color rojo",
+			"precio":"65",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion/vm5.jpg",
+			"descuento":"6"
+	  },
+		{
+	    "codigo":"28",
+			"nombre":"Gala",
+	    "marca":"GraceKarin",
+	    "descripcion":"Vestido formal de noche, color azul",
+			"precio":"71",
+	    "tallas":["XL","L","M","S"],
+			"srcImagen":"../img/coleccion/vm6.jpg",
+			"descuento":"0"
+	  }
+	]
+}
