@@ -2,16 +2,19 @@
 	{
     "agencia":"CITY MALL",
     "latitud":"-2.1413184",
-    "longitud":"-79.9117752"
+    "longitud":"-79.9117752",
+		"direccion":"Av Benjamín Carrión Mora, Guayaquil, local 11, 2do piso"
   },
   {
     "agencia":"MALL DEL SOL",
     "latitud":"-2.1552748",
-    "longitud":"-79.8947843"
+    "longitud":"-79.8947843",
+		"direccion":"Joaquín José Orrantia González, local 3, PB"
   },
 	{
-    "agencia":"pruebas2",
-    "latitud":"-3.1552748",
-    "longitud":"-80.8947843"
+    "agencia":"CC PLAZA MAYOR",
+    "latitud":"-2.141057",
+    "longitud":"-79.897733",
+		"direccion":"Av. R Baquerizo Nazur, local 3A"
   }
 ]

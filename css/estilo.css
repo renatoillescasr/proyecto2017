@@ -41,6 +41,7 @@ body{
 }
 .thumb{
 	min-height: 200px;
+	margin-top: 10px;
 }
 .imageGaleria{
 	width: auto;
@@ -51,6 +52,13 @@ body{
 .thumbnail{
 	margin-bottom: 0;
 	display: block;
+	-webkit-box-shadow: 5px 3px 16px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 3px 16px 1px rgba(0,0,0,0.75);
+	box-shadow: 5px 3px 16px 1px rgba(0,0,0,0.75);
+	opacity: 0.8;
+}
+.thumbnail:hover{
+	opacity: 1;
 }
 #variante{
 	overflow: auto;
@@ -71,6 +79,9 @@ body{
 .datosVestido{
 	float: none;
 	margin: 0 auto;
+}
+.datosgaleria{
+	margin-top: 10px;
 }
 .botoncomprar{
 	margin-top: 10px;
@@ -96,10 +107,15 @@ ul{
 	margin-bottom: 0;
 }
 .informacion{
-	background-color: #000;
+	background-color: #0B0F12;
+	border-radius: 5px;
 }
 .redesSociales>h2, .mails>form{
 	color: #ffffff;
+	font-weight: bold;
+}
+h1,h2,h3{
+	text-shadow: 5px 5px 5px #aaa;
 	font-weight: bold;
 }
 #map{
@@ -117,4 +133,10 @@ input{
 	margin: 10px 0;
 	padding: 10px 10px;
 	font-size: 12pt;
+}
+#administracion{
+	float: right;
+}
+#derechos{
+	text-align: center;
 }

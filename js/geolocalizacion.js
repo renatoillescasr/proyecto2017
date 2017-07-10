@@ -1,15 +1,7 @@
 
 // -------- PARA MAPA ---------------------------
-///var map;
-//function myMap() {
-//  map = new google.maps.Map(document.getElementById('map'), {
-//    center: {lat: 0, lng: 0},
-//    center: {lat: -2, lng: -51},
-//    zoom: 4
-//  });
-//}
-var http_request = false;
-var glocal = [];
+var http_request = false,
+ glocal = [];
 
 function myMap(json) {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -38,14 +30,12 @@ function myMap(json) {
 }
 
 //------------------ AJAX -----------------------
-
 function makeRequest(url) {
     http_request = false;
     if (window.XMLHttpRequest) { // Mozilla, Safari,...
         http_request = new XMLHttpRequest();
         if (http_request.overrideMimeType) {
             http_request.overrideMimeType('text/plain');
-            // Ver nota sobre esta linea al final
         }
     } else if (window.ActiveXObject) { // IE
         try {
@@ -68,7 +58,6 @@ function makeRequest(url) {
 function alertContents() {
     if (http_request.readyState == 4) {
         if (http_request.status == 200) {
-            /*Aquí deben procesar el JSON y mostrar la respuesta en el HTML*/
             var data = JSON.parse(http_request.responseText);
             var datosweb = document.getElementsByClassName('map');
             //datos JSON los almacena en un arreglo
@@ -90,20 +79,20 @@ function alertContents() {
 function locales(json){
   var agregarlocal = document.getElementById('locales');
   for (i = 0; i < json.length; i++) {
-    var li = document.createElement('li');
-    var relleno = json[i]['agencia'];
-    console.log(relleno);
-    console.log(typeof relleno);
-    li.textContent = relleno;
-    agregarlocal.appendChild(li);
+    var liag = document.createElement('h5');
+    var lidir = document.createElement('p');
+    liag.setAttribute("class","glyphicon glyphicon-map-marker")
+    var agencia = json[i]['agencia'];
+    var direccion = json[i]['direccion'];
+    console.log(agencia);
+    console.log(typeof agencia);
+    liag.textContent = " "+agencia;
+    lidir.textContent = direccion;
+    agregarlocal.appendChild(liag);
+    agregarlocal.appendChild(lidir);
   }
 }
 
 window.onload = function() {
-    //myMap();
     makeRequest("../data/locales.json");
-    //var link = document.getElementById('requerimiento');
-    //link.onclick = function() {
-        //makeRequest("");
-    //}
 }

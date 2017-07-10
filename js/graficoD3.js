@@ -30,7 +30,7 @@ var svg = d3.select("#graficaD3").append("svg")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // load the data
-d3.json("../data/catalogo.json", function(error, data) {
+d3.json("../data/catalogo1.json", function(error, data) {
   data.catalogo.forEach(function(d){
   //data.forEach(function(d) {
     d.nombre = d.nombre;
