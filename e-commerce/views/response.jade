@@ -1,0 +1,33 @@
+extend base
+
+block styles
+
+  // BOOTSTRAP
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+
+  // FONTS AWESONE
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+  // GOOGLE FONTS
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Josefin+Slab')
+
+  // BOOTSTRAP SOCIAL NETWORKS
+  link(rel='stylesheet' href='/stylesheets/bootstrap-social.css')
+
+  // ESTILO DE LA PAGINA
+  link(rel='stylesheet' href='/stylesheets/estilo.css')
+
+block content
+  section
+    h1= title
+    h2 Correo:  #{user.email}
+    h2 Contraseña:  #{user.password}
+
+    a(href='/login/#{method}') Retornar
+
+block javascript
+  // JQUERY
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+
+  // BOOTSTRAP
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')

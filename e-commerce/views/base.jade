@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    title=title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    block styles
+  body
+    // Cabecera y menus navegacion
+    header.container
+      section.container.row
+        figure.col-xs-12.col-sm-2.col-md-2
+          a(href='index.html')
+            img(src='/images/logo2.jpg', alt='logoweb').logo. img-responsive
+
+        nav.navbar.menuSesion.col-xs-12.col-sm-10.col-md-10
+          div.container-fluid.nav.navbar-nav.navbar-right.haber
+            a(href='registro.html')#registro
+              span.glyphicon.glyphicon-list-alt
+              Registrate
+            a(href='iniciosesion.html')#iniciosesion
+              span.glyphicon.glyphicon-user
+              Iniciar Sesion
+            a(href='micarrito.html')#carrito
+              span.glyphicon.glyphicon-shopping-cart
+              Mi Carrito
+      nav.navbar.navbar-inverse.menuClientes.row
+        div.container-fluid
+          div.navbar-header
+            button(type="button", data-toggle='collapse' data-target='#myNavbar').navbar-toggle
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+
+        div#myNavbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.menuNavegacion
+            li
+              a(href='index.html') Inicio
+            li
+              a(href='catalogo.html') Catalogo
+            li
+              a(href='tiendas.html') Tiendas
+            li
+              a(href='contacto.html') Contacto
+
+    block content
+
+    // Pie de pagina
+    footer.container
+      nav.menuEmpresa
+        a(href='#') La Empresa
+        a(href='#') Mision
+        a(href='#') Vision
+        a(href='graficoD3.html')#administracion
+          span.glyphicon.glyphicon-eye-open
+          Administracion
+
+      h4#derechos
+        span.glyphicon.glyphicon-copyright-mark
+        Derechos Reservados
+
+    block javascripts
+
